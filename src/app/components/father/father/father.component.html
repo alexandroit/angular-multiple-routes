@@ -1,0 +1,29 @@
+<div>
+  <a [routerLink]="['/father']">
+    father
+  </a>
+  <a [routerLink]="[{ outlets: { one: ['child-one'] } }]">
+    child 1
+  </a>
+  <a [routerLink]="[{ outlets: { two: ['child-two'] } }]">
+    child 2
+  </a>
+  <a [routerLink]="[{ outlets: { three: ['child-three'] } }]">
+    child 3
+  </a>
+  <a [routerLink]="[{ outlets: { four: ['child-four'] } }]">
+    child 4
+  </a>
+<!-- <a [routerLink]="[{ outlets: { primary: ['products'],sidebar: ['products'] } }]">
+  Products List
+</a> -->
+</div>
+
+
+<router-outlet name="one"></router-outlet>
+
+<router-outlet name="two"></router-outlet>
+
+<router-outlet name="three"></router-outlet>
+
+<router-outlet name="four"></router-outlet>
