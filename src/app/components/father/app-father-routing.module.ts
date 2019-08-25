@@ -8,12 +8,12 @@ import { FatherComponent } from './father/father.component';
 import { ChildOneComponent } from './child-one/child-one.component';
 
 const fatherRoutes: Routes = [
-  { path: 'father', component: FatherComponent,
+  { path: 'father', component: FatherComponent, data: { state : 'father'},
     children: [
-      { path: 'child-one', component: ChildOneComponent, outlet: 'one'},
-      { path: 'child-two', component: ChildTwoComponent, outlet: 'two'},
-      { path: 'child-three', component: ChildThreeComponent, outlet: 'three'},
-      { path: 'child-four', component: ChildFourComponent, outlet: 'four'}
+      { path: 'child-one', component: ChildOneComponent, outlet: 'one', data: { state : 'one'}},
+      { path: 'child-two', component: ChildTwoComponent, outlet: 'two', data: { state : 'two'}},
+      { path: 'child-three', component: ChildThreeComponent, outlet: 'three', data: { state : 'three'}},
+      { path: 'child-four', component: ChildFourComponent, outlet: 'four', data: { state : 'four'}}
     ]
   },
 

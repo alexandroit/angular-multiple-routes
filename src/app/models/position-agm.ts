@@ -2,8 +2,8 @@
 
 
 export class PositionAGM {
-  public infowindow: google.maps.InfoWindow;
-  public marker: google.maps.Marker;
+  public infowindow: any;
+  public marker: any;
   constructor(
     public accuracy: number| null = null,
     public altitude: number | null = null,

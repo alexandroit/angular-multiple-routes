@@ -1,1 +1,25 @@
-<router-outlet></router-outlet>
+<div>
+  <a [routerLink]="['/father']">
+    father
+  </a>
+  <a [routerLink]="['/child-one']">
+    child 1
+  </a>
+  <a [routerLink]="['/child-two']">
+    child 2
+  </a>
+  <a [routerLink]="['/child-three']">
+    child 3
+  </a>
+  <a [routerLink]="['/child-four']">
+    child 4
+  </a>
+<!-- <a [routerLink]="[{ outlets: { primary: ['products'],sidebar: ['products'] } }]">
+  Products List
+</a> -->
+</div>
+<br><br><br><br>
+
+<div [@animRoutes]="animationState">
+  <router-outlet (activate)="onActivate($event)"></router-outlet>
+</div>
